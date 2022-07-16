@@ -5,7 +5,7 @@ require 'recipe/codeigniter.php';
 
 // Config
 
-set('repository', '');
+set('repository', 'git@github.com:yllumi/testing-deployer.git');
 
 add('shared_files', []);
 add('shared_dirs', []);
@@ -15,6 +15,7 @@ add('writable_dirs', []);
 
 host('103.191.92.11')
     ->set('remote_user', 'testing')
+    ->set('http_user', 'testing')
     ->set('deploy_path', '~/ci3');
 
 // Tasks
